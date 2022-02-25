@@ -9,6 +9,8 @@ async function _getTasks(){
         let template = ""
         ProxyState.tasks.forEach(t => template += t.Template)
         document.getElementById("tasks").innerHTML = template
+        const completedTask = ProxyState.tasks.filter(t => t.completed == true)
+        document.getElementById("completed").innerText = `${completedTask.length}/${ProxyState.tasks.length}`
     }
 
 export class TasksController{
