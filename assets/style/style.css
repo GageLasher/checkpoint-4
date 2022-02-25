@@ -6,3 +6,10 @@ body {
     display: block;
     color: #fff;
 }
+.hidden-text {
+    opacity: 0;
+}
+
+.reveal:hover .hidden-text {
+    opacity: 1;
+}

@@ -6,7 +6,7 @@ export class Quote{
     get Template(){
         return `
         <div class="image-text"> <p> ${this.quote} </p> </div>
-        <div class="image-text"> <h6> ${this.author} </h6> </div>
+        <div class="image-text"> <h6 class="hidden-text"> ${this.author} </h6> </div>
         `
     }
 }

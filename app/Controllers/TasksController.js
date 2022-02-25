@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { tasksService } from "../Services/TasksService.js";
+import { Pop } from "../Utils/Pop.js";
 
 async function _getTasks(){
     await tasksService._getTasks()
@@ -34,7 +35,14 @@ export class TasksController{
         
     }
     async removeTask(id){
-        await tasksService.removeTask(id)
+        try {
+            if(await Pop.confirm()) {
+                await tasksService.removeTask(id)
+            }
+        } catch (error) {
+            console.error(error);
+        }
+       
     }
    async checked(id){
        try {
