@@ -2,3 +2,7 @@
 body {
     background-size: cover;
 }
+.image-text {
+    display: block;
+    color: #fff;
+}
