@@ -36,4 +36,12 @@ export class TasksController{
     async removeTask(id){
         await tasksService.removeTask(id)
     }
+   async checked(id){
+       try {
+           await tasksService.checked(id)
+       } catch (error) {
+           console.error(error);
+       }
+        
+    }
 }

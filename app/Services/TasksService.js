@@ -20,6 +20,19 @@ class TasksService{
         const res = await sandboxApi.delete(`gage/todos/${id}`)
         ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
     }
+   async checked(id){
+        let task = ProxyState.tasks.find(t => t.id == id)
+        if (task.completed) {
+            task.completed = false
+        } else {
+            task.completed = true
+        }
+
+        const res = await sandboxApi.put(`gage/todos/${id}`, task)
+        ProxyState.tasks = ProxyState.tasks
+
+        console.log(task);
+    }
 }
 
 
