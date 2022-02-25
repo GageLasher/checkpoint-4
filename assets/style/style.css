@@ -5,6 +5,7 @@ body {
 .image-text {
     display: block;
     color: #fff;
+    text-shadow: rgba(48, 48, 48, 0.493)
 }
 .hidden-text {
     opacity: 0;
