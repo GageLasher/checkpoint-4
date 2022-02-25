@@ -33,4 +33,7 @@ export class TasksController{
       }
         
     }
+    async removeTask(id){
+        await tasksService.removeTask(id)
+    }
 }
