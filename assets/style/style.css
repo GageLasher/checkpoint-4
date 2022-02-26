@@ -19,3 +19,6 @@ image {
 .reveal:hover .hidden-text {
     opacity: 1;
 }
+.card {
+    opacity: 90%;
+}
